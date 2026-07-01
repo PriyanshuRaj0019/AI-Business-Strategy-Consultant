@@ -1,8 +1,8 @@
-const API = "http://127.0.0.1:8000";
+const API = window.location.origin;
 
 const analyzeBtn = document.getElementById("analyzeBtn");
 const companyInput = document.getElementById("company");
-const reportSelect = document.getElementById("report");
+const reportSelect = document.getElementById("reportType");
 const loading = document.getElementById("loading");
 
 analyzeBtn.addEventListener("click", analyzeCompany);
@@ -13,11 +13,8 @@ async function analyzeCompany() {
     const reportType = reportSelect.value;
 
     if (!company) {
-
         alert("Please enter a company name.");
-
         return;
-
     }
 
     loading.style.display = "block";
@@ -27,64 +24,39 @@ async function analyzeCompany() {
 
     try {
 
-        const response = await fetch(
-            `${API}/analyze`,
-            {
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    company: company,
-                    report_type: reportType
-                })
-            }
-        );
+        const response = await fetch(`${API}/analyze`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                company: company,
+                report_type: reportType
+            })
+        });
 
         const data = await response.json();
 
         if (!response.ok) {
-
-            throw new Error(data.detail);
-
+            throw new Error(data.detail || "Analysis failed.");
         }
 
-        localStorage.setItem(
-            "company_name",
-            data.company
-        );
+        localStorage.setItem("company_name", data.company);
+        localStorage.setItem("report_type", data.report_type);
+        localStorage.setItem("business_report", data.report);
 
-        localStorage.setItem(
-            "report_type",
-            data.report_type
-        );
+        window.location.href = "/report.html";
 
-        localStorage.setItem(
-            "business_report",
-            data.report
-        );
-
-        window.location.href = "report.html";
-
-    }
-
-    catch (err) {
+    } catch (err) {
 
         console.error(err);
-
         alert(err.message);
 
-    }
-
-    finally {
+    } finally {
 
         loading.style.display = "none";
-
         analyzeBtn.disabled = false;
-
-        analyzeBtn.innerHTML = "Analyze Company";
+        analyzeBtn.innerHTML = "🚀 Analyze Company";
 
     }
 
