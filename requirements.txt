@@ -7,5 +7,6 @@ langgraph
 groq
 python-dotenv
 pydantic
+pydantic-settings
 python-multipart
-markdown
+markdown 
