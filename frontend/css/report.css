@@ -1,0 +1,500 @@
+/* =======================================================
+   Global
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f4f7fb;
+
+    color:#222;
+
+}
+
+.container{
+
+    width:92%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    padding:35px 0;
+
+}
+
+/* =======================================================
+   Header
+======================================================= */
+
+.header-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.header-left{
+
+    flex:1;
+
+}
+
+.header-left h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.header-left h3{
+
+    color:#0b57d0;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+#generatedDate{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.header-right{
+
+    text-align:right;
+
+}
+
+.header-right h2{
+
+    margin-bottom:10px;
+
+}
+
+.header-right p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* =======================================================
+   KPI Cards
+======================================================= */
+
+.kpi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:35px;
+
+}
+
+.kpi{
+
+    background:#fff;
+
+    padding:28px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.kpi:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+}
+
+.kpi h2{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+    color:#0b57d0;
+
+}
+
+.kpi span{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* =======================================================
+   Grid
+======================================================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+    margin-bottom:25px;
+
+}
+
+canvas{
+
+    width:100%!important;
+
+    height:350px!important;
+
+}
+
+/* =======================================================
+   Report
+======================================================= */
+
+.report-card{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    margin-bottom:35px;
+
+}
+
+.report-card h2{
+
+    margin-bottom:20px;
+
+}
+
+.report-card hr{
+
+    margin-bottom:30px;
+
+}
+
+.report-card h1{
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+}
+
+.report-card h2{
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+}
+
+.report-card h3{
+
+    margin-top:20px;
+
+    margin-bottom:12px;
+
+}
+
+.report-card p{
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+
+}
+
+.report-card ul{
+
+    margin-left:25px;
+
+    margin-bottom:20px;
+
+}
+
+.report-card li{
+
+    margin-bottom:8px;
+
+}
+
+.report-card table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:25px 0;
+
+}
+
+.report-card table th{
+
+    background:#0b57d0;
+
+    color:#fff;
+
+}
+
+.report-card table th,
+.report-card table td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:left;
+
+}
+
+.report-card code{
+
+    background:#eef2ff;
+
+    padding:2px 6px;
+
+    border-radius:5px;
+
+}
+
+/* =======================================================
+   Download Buttons
+======================================================= */
+
+.downloads{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+button{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:16px 32px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+#pdfBtn{
+
+    background:#e53935;
+
+    color:white;
+
+}
+
+#pptBtn{
+
+    background:#fb8c00;
+
+    color:white;
+
+}
+
+#mdBtn{
+
+    background:#43a047;
+
+    color:white;
+
+}
+
+/* =======================================================
+   Scrollbar
+======================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0b57d0;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+/* =======================================================
+   Responsive
+======================================================= */
+
+@media(max-width:1200px){
+
+.kpi-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.header-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.header-right{
+
+text-align:center;
+
+}
+
+.kpi-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.container{
+
+width:96%;
+
+}
+
+.report-card{
+
+padding:25px;
+
+}
+
+.header-left h1{
+
+font-size:32px;
+
+}
+
+canvas{
+
+height:280px!important;
+
+}
+
+}
+
+@media(max-width:500px){
+
+button{
+
+width:100%;
+
+}
+
+.downloads{
+
+flex-direction:column;
+
+}
+
+}

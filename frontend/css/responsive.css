@@ -1,0 +1,106 @@
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px){
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .hero{
+
+        padding:60px 6%;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .analyze-box{
+
+        flex-direction:column;
+
+    }
+
+    .analyze-box input{
+
+        width:100%;
+
+    }
+
+    .analyze-box select{
+
+        width:100%;
+
+    }
+
+    .analyze-box button{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo{
+
+        font-size:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+}
+

@@ -1,0 +1,286 @@
+/* =====================================================
+   Google Font
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   Reset
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* =====================================================
+   Hero
+===================================================== */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 10%;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:950px;
+
+}
+
+.hero h1{
+
+    font-size:56px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    color:#cbd5e1;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+/* =====================================================
+   Analyze Box
+===================================================== */
+
+.analyze-box{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:40px;
+
+}
+
+.analyze-box input{
+
+    width:320px;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#1f2937;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.analyze-box select{
+
+    width:260px;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#1f2937;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.analyze-box button{
+
+    padding:18px 34px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+    );
+
+    transition:.35s;
+
+}
+
+.analyze-box button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* =====================================================
+   Features
+===================================================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(260px,1fr)
+    );
+
+    gap:25px;
+
+    padding:60px 8%;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(20px);
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563eb;
+
+}
+
+.card h2{
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+   Loading
+===================================================== */
+
+#loading{
+
+    text-align:center;
+
+    padding:80px;
+
+}
+
+#loading h2{
+
+    color:#38bdf8;
+
+    font-size:34px;
+
+}
+
+/* =====================================================
+   Utility
+===================================================== */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    font-size:40px;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+

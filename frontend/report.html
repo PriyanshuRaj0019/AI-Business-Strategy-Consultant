@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Business Strategy Consultant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/report.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ====================================== -->
+    <!-- Navigation -->
+    <!-- ====================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            📊 AI Business Strategy Consultant
+
+        </div>
+
+    </nav>
+
+    <div class="container">
+
+        <!-- ====================================== -->
+        <!-- Executive Header -->
+        <!-- ====================================== -->
+
+        <div class="header-card">
+
+            <div class="header-left">
+
+                <h1 id="company"></h1>
+
+                <h3 id="reportType"></h3>
+
+                <p id="generatedDate"></p>
+
+            </div>
+
+            <div class="header-right">
+
+                <h2>
+
+                    Executive Dashboard
+
+                </h2>
+
+                <p>
+
+                    Powered by
+
+                    <br>
+
+                    LangGraph
+
+                    <br>
+
+                    Groq
+
+                    <br>
+
+                    Llama 3.3 70B
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ====================================== -->
+        <!-- KPI Cards -->
+        <!-- ====================================== -->
+
+        <div class="kpi-grid">
+
+            <div class="kpi">
+
+                <h2 id="healthScore">
+
+                    --
+
+                </h2>
+
+                <span>
+
+                    Business Health
+
+                </span>
+
+            </div>
+
+            <div class="kpi">
+
+                <h2 id="riskScore">
+
+                    --
+
+                </h2>
+
+                <span>
+
+                    Risk Score
+
+                </span>
+
+            </div>
+
+            <div class="kpi">
+
+                <h2 id="industryGrowth">
+
+                    --
+
+                </h2>
+
+                <span>
+
+                    Industry Growth
+
+                </span>
+
+            </div>
+
+            <div class="kpi">
+
+                <h2 id="marketPosition">
+
+                    --
+
+                </h2>
+
+                <span>
+
+                    Market Position
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ====================================== -->
+        <!-- Analytics Dashboard -->
+        <!-- ====================================== -->
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h2>
+
+                    💚 Business Health
+
+                </h2>
+
+                <canvas id="healthChart"></canvas>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    📈 Market Position
+
+                </h2>
+
+                <canvas id="marketChart"></canvas>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    🎯 SWOT Analysis
+
+                </h2>
+
+                <canvas id="swotChart"></canvas>
+
+            </div>
+
+            <div class="card">
+
+                <h2>
+
+                    💰 Revenue Outlook
+
+                </h2>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- ====================================== -->
+        <!-- Executive Report -->
+        <!-- ====================================== -->
+
+        <div class="report-card">
+
+            <h2>
+
+                Executive Business Report
+
+            </h2>
+
+            <hr>
+
+            <div id="report"></div>
+
+        </div>
+
+        <!-- ====================================== -->
+        <!-- Downloads -->
+        <!-- ====================================== -->
+
+        <div class="downloads">
+
+            <button id="pdfBtn">
+
+                📄 Download PDF
+
+            </button>
+
+            <button id="pptBtn">
+
+                📊 Download PowerPoint
+
+            </button>
+
+            <button id="mdBtn">
+
+                📝 Download Markdown
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/report.js"></script>
+
+</body>
+
+</html>
